@@ -18,7 +18,7 @@ import java.io.IOException;
 
 public class Login extends AppCompatActivity {
     public static final String FILENAME = "login";
-    private EditText email;
+    private EditText nohp;
     private EditText password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class Login extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-        email = findViewById(R.id.email);
+        nohp = findViewById(R.id.nohp);
         password = findViewById(R.id.password);
         Button login = findViewById(R.id.login);
         Button register = findViewById(R.id.register);
@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity {
     }
 
     void simpanFileLogin() {
-        String isiFile = email.getText().toString() + ";" + password.getText().toString();
+        String isiFile = nohp.getText().toString() + ";" + password.getText().toString();
         File file = new File(getFilesDir(), FILENAME);
 
         try (FileOutputStream fos = new FileOutputStream(file, false)) {
@@ -57,7 +57,7 @@ public class Login extends AppCompatActivity {
 
     void login(){
         File sdcard = getFilesDir();
-        File file = new File(sdcard, email.getText().toString());
+        File file = new File(sdcard, nohp.getText().toString());
 
         if (file.exists()) {
             StringBuffer text = new StringBuffer();

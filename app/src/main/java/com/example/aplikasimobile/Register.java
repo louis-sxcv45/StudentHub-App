@@ -17,6 +17,8 @@ import java.io.FileOutputStream;
 public class Register extends AppCompatActivity {
     private EditText email;
     private EditText password;
+    private EditText nohp;
+    private EditText nik;
     EditText[] ets;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +28,16 @@ public class Register extends AppCompatActivity {
 
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
+        nohp = findViewById(R.id.nohp);
+        nik = findViewById(R.id.nik);
 
         Button register = findViewById(R.id.register);
 
         ets = new EditText[] {
                 email,
                 password,
+                nohp,
+                nik
         };
         register.setOnClickListener(v ->{
             if(isValidation()){
@@ -58,7 +64,7 @@ public class Register extends AppCompatActivity {
             isiFile += et.getText().toString() + ";";
         }
 
-        File file = new File(getFilesDir(), email.getText().toString());
+        File file = new File(getFilesDir(), nohp.getText().toString());
 
         try (FileOutputStream fos = new FileOutputStream(file, false)) {
             fos.write(isiFile.getBytes());

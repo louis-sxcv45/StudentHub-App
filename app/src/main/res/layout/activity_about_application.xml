@@ -33,6 +33,6 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:textFontWeight="@integer/material_motion_duration_long_1"
-        android:text="Aplikasi StudentHub merupakan aplikasi yang digunakan untuk pendataan siswa. Di aplikasi StudentHub user nantinya akan menambahkan, melihat, update dan delete data siswa." />
+        android:text="Aplikasi StudentHub merupakan aplikasi yang digunakan untuk pendataan siswa. Di aplikasi StudentHub user nantinya akan menambahkan, melihat, update dan delete data Mahasiswa." />
 
 </LinearLayout>
